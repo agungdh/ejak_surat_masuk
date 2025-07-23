@@ -18,15 +18,15 @@ class DiklatController extends Controller
 
     public function datatable(Request $request)
     {
-        $datas = Diklat::from(new Diklat()->getTable().' as d');
+        $datas = Diklat::from((new Diklat)->getTable().' as d');
         $datas->select([
             'd.*',
             'p.nama',
             'p.nip',
             'jp.jenis_pelatihan',
         ]);
-        $datas = $datas->join(new Pegawai()->getTable().' as p', 'd.pegawai_id', '=', 'p.id');
-        $datas = $datas->join(new JenisPelatihan()->getTable().' as jp', 'd.jenis_pelatihan_id', '=', 'jp.id');
+        $datas = $datas->join((new Pegawai)->getTable().' as p', 'd.pegawai_id', '=', 'p.id');
+        $datas = $datas->join((new JenisPelatihan)->getTable().' as jp', 'd.jenis_pelatihan_id', '=', 'jp.id');
 
         if ($request->pegawai_id) {
             $datas = $datas->where('p.id', $request->pegawai_id);

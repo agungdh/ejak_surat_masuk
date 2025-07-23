@@ -16,13 +16,13 @@ class LcController extends Controller
 
     public function datatable(Request $request)
     {
-        $datas = Lc::from(new Lc()->getTable().' as l');
+        $datas = Lc::from((new Lc)->getTable().' as l');
         $datas->select([
             'l.*',
             'p.nama',
             'p.nip',
         ]);
-        $datas = $datas->join(new Pegawai()->getTable().' as p', 'l.pegawai_id', '=', 'p.id');
+        $datas = $datas->join((new Pegawai)->getTable().' as p', 'l.pegawai_id', '=', 'p.id');
 
         if ($request->pegawai_id) {
             $datas = $datas->where('p.id', $request->pegawai_id);

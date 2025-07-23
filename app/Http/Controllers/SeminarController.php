@@ -16,13 +16,13 @@ class SeminarController extends Controller
 
     public function datatable(Request $request)
     {
-        $datas = Seminar::from(new Seminar()->getTable().' as s');
+        $datas = Seminar::from((new Seminar)->getTable().' as s');
         $datas->select([
             's.*',
             'p.nama',
             'p.nip',
         ]);
-        $datas = $datas->join(new Pegawai()->getTable().' as p', 's.pegawai_id', '=', 'p.id');
+        $datas = $datas->join((new Pegawai)->getTable().' as p', 's.pegawai_id', '=', 'p.id');
 
         if ($request->pegawai_id) {
             $datas = $datas->where('p.id', $request->pegawai_id);

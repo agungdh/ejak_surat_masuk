@@ -16,13 +16,13 @@ class WebinarController extends Controller
 
     public function datatable(Request $request)
     {
-        $datas = Webinar::from(new Webinar()->getTable().' as w');
+        $datas = Webinar::from((new Webinar)->getTable().' as w');
         $datas->select([
             'w.*',
             'p.nama',
             'p.nip',
         ]);
-        $datas = $datas->join(new Pegawai()->getTable().' as p', 'w.pegawai_id', '=', 'p.id');
+        $datas = $datas->join((new Pegawai)->getTable().' as p', 'w.pegawai_id', '=', 'p.id');
 
         if ($request->pegawai_id) {
             $datas = $datas->where('p.id', $request->pegawai_id);
