@@ -39,3 +39,7 @@ jobs:
       run: npm run build
     - name: Format
       run: ./format.sh
+    - name: Migrate
+      run: php artisan migrate
+    - name: Seed
+      run: php artisan db:seed
