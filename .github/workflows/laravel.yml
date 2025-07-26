@@ -39,7 +39,8 @@ jobs:
       run: npm run build
     - name: Format
       run: ./format.sh
-    - name: Migrate
-      run: php artisan migrate
-    - name: Seed
-      run: php artisan db:seed
+    - name: Migrate and Seed
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+      run: php artisan migrate --seed
