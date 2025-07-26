@@ -12,6 +12,6 @@ class PegawaiSeeder extends Seeder
      */
     public function run(): void
     {
-        Artisan::call('app:import-data-pegawai');
+//        Artisan::call('app:import-data-pegawai');
     }
 }

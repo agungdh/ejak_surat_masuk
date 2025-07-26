@@ -17,12 +17,6 @@ class DatabaseSeeder extends Seeder
             BidangSeeder::class,
             PangkatGolonganSeeder::class,
             PegawaiSeeder::class,
-            JenisPelatihanSeeder::class,
-            DiklatSeeder::class,
-            PpmSeeder::class,
-            SeminarSeeder::class,
-            WebinarSeeder::class,
-            LcSeeder::class,
         ]);
     }
 }
