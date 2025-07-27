@@ -77,7 +77,7 @@
                         <img src="{{ $user->image }}" class="img-circle elevation-2" alt="User Image">
                         <p>
                             {{ $user->profile->nama }}
-                            <small>{{ $user->username }}</small>
+                            <small>{{ $user->username }} - {{ $user->rolename }}</small>
                         </p>
                     </li>
                     <!-- Menu Footer-->
