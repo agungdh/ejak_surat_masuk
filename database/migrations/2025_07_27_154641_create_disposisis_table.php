@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('surat_masuks', function (Blueprint $table) {
+        Schema::create('disposisis', function (Blueprint $table) {
             $table->id();
-            $table->string('nomor_surat');
-            $table->date('tanggal_surat');
-            $table->string('perihal');
-            $table->string('pengirim');
-            $table->string('penerima');
-            $table->boolean('status_agenda');
+            $table->foreignId('surat_masuk_id')->constrained()->onDelete('cascade');
+            $table->foreignId('pegawai_id')->constrained();
+            $table->enum('tipe', ['staf tu', 'kasubbag up', 'sekretaris', 'kadis']);
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('surat_masuks');
+        Schema::dropIfExists('disposisis');
     }
 };

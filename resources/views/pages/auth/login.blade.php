@@ -18,19 +18,10 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/assets/AdminLTE-3.2.0/dist/css/adminlte.min.css">
 
-    <link rel="icon" href="/assets/images/426af677dddc080bde5939670bea6d39~tplv-tiktokx-cropcenter_1080_1080.jpeg"
+    <link rel="icon" href="/assets/images/angular_gradient.png"
           type="image/x-icon">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <style>
-        body.login-page {
-            background-image: url('/assets/images/WhatsApp Image 2025-07-09 at 13.51.39.jpeg'); /* Ganti path gambar sesuai lokasi kamu */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -108,7 +99,7 @@
 
                     await axios.post('/login', this.formData);
 
-                    window.location.href = '/';
+                    window.location.href = '/dashboard';
                 } catch (err) {
                     if (err.response?.status === 422) {
                         toastr.error('Username atau password salah');

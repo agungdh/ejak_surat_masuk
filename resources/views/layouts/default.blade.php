@@ -47,7 +47,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/assets/AdminLTE-3.2.0/dist/css/adminlte.min.css">
 
-    <link rel="icon" href="/assets/images/426af677dddc080bde5939670bea6d39~tplv-tiktokx-cropcenter_1080_1080.jpeg"
+    <link rel="icon" href="/assets/images/angular_gradient.png"
           type="image/x-icon">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -97,7 +97,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="/" class="brand-link">
-            <img src="/assets/images/426af677dddc080bde5939670bea6d39~tplv-tiktokx-cropcenter_1080_1080.jpeg"
+            <img src="/assets/images/angular_gradient.png"
                  alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">{{config('app.name')}}</span>
         </a>
