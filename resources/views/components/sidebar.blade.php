@@ -14,6 +14,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="/pegawai" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>
+                        Pegawai
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="/surat-masuk" class="nav-link">
                     <i class="nav-icon fas fa-book"></i>
                     <p>

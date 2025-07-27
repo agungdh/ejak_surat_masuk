@@ -118,6 +118,8 @@
                     </template>
                 </div>
 
+                <div class="col-6"></div>
+
                 <div class="form-group col-6">
                     @php($formName = 'password')
                     @php($formLabel = 'Password')

@@ -12,8 +12,6 @@ class PegawaiSeeder extends Seeder
      */
     public function run(): void
     {
-        Pegawai::factory(50)->create();
-
         $roles = collect(['staf tu', 'kasubbag up', 'sekretaris', 'kadis']);
         $roles->each(function ($role) {
             $pegawai = Pegawai::factory()->create();
@@ -28,5 +26,7 @@ class PegawaiSeeder extends Seeder
             $pegawai->tipe = $role;
             $pegawai->save();
         });
+
+        Pegawai::factory(50)->create();
     }
 }
