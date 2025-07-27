@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pegawai;
 use App\Models\SuratMasuk;
-use App\Models\Webinar;
 use App\Service\FileService;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -39,26 +37,26 @@ class SuratMasukController extends Controller
             ->make();
     }
 
-
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         return view('pages.surat-masuk.index');
     }
 
     public function berkas(SuratMasuk $suratMasuk)
     {
-        $fileName = 'Surat Masuk ' . $suratMasuk->id . '.pdf';
+        $fileName = 'Surat Masuk '.$suratMasuk->id.'.pdf';
 
-            return response()
-                ->file(
-                    storage_path('app/private/surat_masuk/'.$suratMasuk->id),
-                    [
-                        'Content-Type' => $this->fileService->getMimeTypeByFilename($fileName),
-                        'Content-Disposition' => 'inline; filename="'.urlencode($fileName).'"',
-                        // header untuk mematikan cache
-                        'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
-                        'Pragma' => 'no-cache',
-                        'Expires' => '0',
-                    ]
-                );
+        return response()
+            ->file(
+                storage_path('app/private/surat_masuk/'.$suratMasuk->id),
+                [
+                    'Content-Type' => $this->fileService->getMimeTypeByFilename($fileName),
+                    'Content-Disposition' => 'inline; filename="'.urlencode($fileName).'"',
+                    // header untuk mematikan cache
+                    'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
+                    'Pragma' => 'no-cache',
+                    'Expires' => '0',
+                ]
+            );
     }
 }

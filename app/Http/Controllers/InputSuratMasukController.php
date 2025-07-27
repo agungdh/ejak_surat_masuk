@@ -10,6 +10,7 @@ class InputSuratMasukController extends Controller
 {
     /**
      * Handle the incoming request.
+     *
      * @throws \Throwable
      */
     public function __invoke(Request $request)
@@ -24,7 +25,7 @@ class InputSuratMasukController extends Controller
         ]);
 
         DB::transaction(function () use ($request) {
-            $suratMasuk = new SuratMasuk();
+            $suratMasuk = new SuratMasuk;
             $suratMasuk->nomor_surat = $request->nomor_surat;
             $suratMasuk->tanggal_surat = $request->tanggal_surat;
             $suratMasuk->perihal = $request->perihal;
@@ -34,7 +35,6 @@ class InputSuratMasukController extends Controller
 
             $request->file('berkas')->storeAs('surat_masuk', $suratMasuk->id);
         });
-
 
     }
 }

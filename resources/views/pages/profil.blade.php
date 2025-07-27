@@ -133,7 +133,7 @@
                     nama: '',
                     bidang_id: '',
                     pangkat_golongan_id: '',
-                    jabatan: '',
+                    jabatan: ''
                 },
                 validationErrors: {},
 

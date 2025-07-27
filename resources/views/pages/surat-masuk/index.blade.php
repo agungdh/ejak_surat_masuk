@@ -112,7 +112,7 @@
                     { data: 'pengirim', name: 'pengirim' },
                     { data: 'penerima', name: 'penerima' },
                     { data: 'berkas', name: 'berkas', searchable: false, orderable: false },
-                    { data: 'action', name: 'action', searchable: false, orderable: false },
+                    { data: 'action', name: 'action', searchable: false, orderable: false }
                 ]
             });
         });

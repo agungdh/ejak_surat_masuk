@@ -2,14 +2,9 @@
 
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DiklatController;
 use App\Http\Controllers\InputSuratMasukController;
-use App\Http\Controllers\LcController;
 use App\Http\Controllers\PegawaiController;
-use App\Http\Controllers\PpmController;
-use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\SuratMasukController;
-use App\Http\Controllers\WebinarController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.input-surat-masuk');
