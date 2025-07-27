@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('perihal');
             $table->string('pengirim');
             $table->string('penerima');
-            $table->boolean('status_agenda');
+            $table->boolean('status_agenda')->nullable();
             $table->timestamps();
         });
     }
