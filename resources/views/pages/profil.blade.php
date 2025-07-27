@@ -89,18 +89,6 @@
                 </div>
 
                 <div class="form-group col-6">
-                    @php($formName = 'peran')
-                    @php($formLabel = 'Peran')
-                    <label for="{{$formName}}">{{$formLabel}}</label>
-                    <input type="text" class="form-control" id="{{$formName}}" placeholder="{{$formLabel}}"
-                           x-model.lazy="formData.{{$formName}}"
-                           :class="{'is-invalid': validationErrors.{{$formName}}}">
-                    <template x-if="validationErrors.{{$formName}}">
-                        <div class="invalid-feedback" x-text="validationErrors.{{$formName}}"></div>
-                    </template>
-                </div>
-
-                <div class="form-group col-6">
                     @php($formName = 'password')
                     @php($formLabel = 'Password')
                     <label for="{{$formName}}">{{$formLabel}}</label>
@@ -144,7 +132,6 @@
                     bidang_id: '',
                     pangkat_golongan_id: '',
                     jabatan: '',
-                    peran: ''
                 },
                 validationErrors: {},
 

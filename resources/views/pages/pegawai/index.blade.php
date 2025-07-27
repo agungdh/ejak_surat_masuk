@@ -111,7 +111,6 @@
                         <th>Bidang</th>
                         <th>Pangkat Golongan</th>
                         <th>Jabatan</th>
-                        <th>Peran</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
@@ -146,7 +145,6 @@
                     { data: 'bidang', name: 'b.bidang' },
                     { data: 'pangkat_golongan', name: 'pg.id' },
                     { data: 'jabatan', name: 'p.jabatan' },
-                    { data: 'peran', name: 'p.peran' },
                     { data: 'action', name: 'action', searchable: false, orderable: false }
                 ]
             });

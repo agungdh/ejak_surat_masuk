@@ -78,8 +78,10 @@ class User extends Authenticatable
     public function getProfile()
     {
         return match ($this->getRole()?->name) {
-            'admin' => $this->admin,
-            'pegawai' => $this->pegawai,
+            'staf tu' => $this->pegawai,
+            'kasubbag up' => $this->pegawai,
+            'sekretaris' => $this->pegawai,
+            'kadis' => $this->pegawai,
             default => null,
         };
     }
