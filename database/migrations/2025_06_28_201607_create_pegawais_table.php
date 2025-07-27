@@ -16,12 +16,11 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('bidang_id')->constrained();
             $table->foreignId('pangkat_golongan_id')->nullable()->constrained();
-            $table->enum('tipe', ['pegawai', 'admin'])->default('pegawai');
+            $table->enum('tipe', ['staf tu', 'kasubbag up', 'sekretaris', 'kadis']);
             $table->enum('status', ['aktif', 'non aktif'])->default('aktif');
             $table->string('nip')->unique();
             $table->string('nama');
             $table->string('jabatan')->nullable();
-            $table->string('peran')->nullable();
             $table->timestamps();
 
             $table->index('tipe');

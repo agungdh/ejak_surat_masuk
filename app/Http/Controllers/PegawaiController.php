@@ -119,7 +119,6 @@ class PegawaiController extends Controller
             $pegawai->nama = $request->nama;
             $pegawai->pangkat_golongan_id = $request->pangkat_golongan_id;
             $pegawai->jabatan = $request->jabatan;
-            $pegawai->peran = $request->peran;
             $pegawai->bidang_id = $request->bidang_id;
             $pegawai->save();
         });
@@ -188,7 +187,6 @@ class PegawaiController extends Controller
             $pegawai->nama = $request->nama;
             $pegawai->pangkat_golongan_id = $request->pangkat_golongan_id;
             $pegawai->jabatan = $request->jabatan;
-            $pegawai->peran = $request->peran;
             $pegawai->bidang_id = $request->bidang_id;
             $pegawai->save();
         });

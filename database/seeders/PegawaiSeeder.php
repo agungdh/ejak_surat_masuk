@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Pegawai;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 
@@ -12,6 +13,6 @@ class PegawaiSeeder extends Seeder
      */
     public function run(): void
     {
-//        Artisan::call('app:import-data-pegawai');
+        Pegawai::factory(1000)->create();
     }
 }
