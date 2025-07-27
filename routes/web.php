@@ -8,6 +8,7 @@ use App\Http\Controllers\LcController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PpmController;
 use App\Http\Controllers\SeminarController;
+use App\Http\Controllers\SuratMasukController;
 use App\Http\Controllers\WebinarController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,24 +27,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/pegawai/datatable', [PegawaiController::class, 'datatable']);
     Route::resource('/pegawai', PegawaiController::class);
 
-    Route::get('/diklat/{diklat}/berkas', [DiklatController::class, 'berkas']);
-    Route::post('/diklat/datatable', [DiklatController::class, 'datatable']);
-    Route::resource('/diklat', DiklatController::class);
-
-    Route::post('/ppm/datatable', [PpmController::class, 'datatable']);
-    Route::resource('/ppm', PpmController::class);
-
-    Route::get('/seminar/{seminar}/berkas', [SeminarController::class, 'berkas']);
-    Route::post('/seminar/datatable', [SeminarController::class, 'datatable']);
-    Route::resource('/seminar', SeminarController::class);
-
-    Route::get('/webinar/{webinar}/berkas', [WebinarController::class, 'berkas']);
-    Route::post('/webinar/datatable', [WebinarController::class, 'datatable']);
-    Route::resource('/webinar', WebinarController::class);
-
-    Route::get('/lc/{lc}/berkas', [LcController::class, 'berkas']);
-    Route::post('/lc/datatable', [LcController::class, 'datatable']);
-    Route::resource('/lc', LcController::class);
+    Route::get('/surat-masuk/{surat_masuk}/berkas', [SuratMasukController::class, 'berkas']);
+    Route::post('/surat-masuk/datatable', [SuratMasukController::class, 'datatable']);
+    Route::resource('/surat-masuk', SuratMasukController::class);
 });
 
 require __DIR__.'/auth.php';
